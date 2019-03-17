@@ -1,33 +1,92 @@
-.App {
-  text-align: center;
+*{
+    padding: 0;
+    margin: 0;
+    font-family: "Helvetica Neue",Helvetica,"PingFang SC","Hiragino Sans GB","Microsoft YaHei","微软雅黑",Arial,sans-serif;
+    font-weight: 200;
 }
-
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
-  pointer-events: none;
+.layout{
+    width: 1000px;
+    margin: 0 auto;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.clearfix::after{
+    content: '';
+    display: block;
+    clear: both;
 }
-
-.App-link {
-  color: #61dafb;
+.header{
+    height:80px;
+    color: #344155;
+    line-height: 80px;
 }
+.header h1{
+    display: inline-block;
+    height: 80px;
+    color: #344155;
+}
+.header .logo{
+    display: inline-block;
+    height: 80px;
+    vertical-align: middle;
+}
+.header ul{
+    float: right;
+    list-style: none;
+    padding: 0 20px;
+}
+.header .line{
+    height: 1px;
+    background: #7F7FD5;
+    background: -webkit-linear-gradient(to right, #91EAE4, #86A8E7, #7F7FD5);
+    background: linear-gradient(to right, #91EAE4, #86A8E7, #7F7FD5);
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+}
+.header ul>li{
+    float: left;
+    padding: 0 30px;
+}
+.header ul>li:hover{
+    border-bottom: 5px solid #91EAE4;
+}
+.app{
+    padding-top: 50px;
+}
+.main{
+    margin-left: 250px;
+}
+.nav-bar{
+    width: 200px;
+    float: left;
+    list-style: none;
+}
+.nav-bar .title{
+    height: 50px;
+    line-height: 50px;
+    text-decoration: none;
+    display: inline-block;
+    width: 100%;
+}
+.nav-bar .nav-group {
+    margin-left: 0;
+    font-size: 16px;
+    list-style: none;
+}
+.nav-bar .nav-group>li{
+    color: #5e6d82;
+    height: 40px;
+    line-height: 40px;
+    font-size: 13px;
+    margin-left: 24px;
+}
+.nav-bar .nav-group li>a{
+    display: inline-block;
+    text-decoration: none;
+    width: 100%;
+    color: #344155;
+}
+.nav-bar .nav-group li>a:hover{
+    transition: 0.5s;
+    color: #409eff;
+}
+.nav-bar li>a:visited{
+    color: #344155;
 }
