@@ -6,7 +6,7 @@ class Header extends React.Component {
             <header className="header clearfix">
                 <div className="layout">
                     <h1>
-                        <img className="logo" src={this.props.logo.image}></img>
+                        <img className="logo" src={this.props.logo.image} alt="logo"></img>
                         {this.props.logo.name}</h1>
                     <ul>
                         {this.props.list.map((element,index) => {
@@ -20,4 +20,4 @@ class Header extends React.Component {
     }
 }
 
-export default Header
+export default Header;

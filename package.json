@@ -3,6 +3,9 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "element-react": "^1.4.33",
+    "highlight.js": "^9.15.6",
+    "pussycat": "^1.0.0",
     "react": "^16.8.4",
     "react-dom": "^16.8.4",
     "react-router": "^4.4.0",

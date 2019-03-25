@@ -13,7 +13,7 @@ class NavBarGroup extends React.Component{
     render() {
         return (
             <li>
-                <a className="title" href="/">{this.props.title} </a>
+                <span className="title">{this.props.title} </span>
                 <ul className="nav-group">
                     {this.props.children}
                 </ul>
