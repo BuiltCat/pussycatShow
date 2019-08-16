@@ -10,7 +10,8 @@ class RadioGroupOne extends React.Component {
         }
     }
     onChange(value) {
-        this.setState({ value });
+        console.log(value)
+        this.setState({ value:value });
     }
     render() {
         return (
@@ -31,7 +32,7 @@ class RadioGroupTwo extends React.Component {
         }
     }
     onChange(value) {
-        this.setState({ value });
+        this.setState({ value:value });
     }
     render() {
         return (
@@ -77,7 +78,7 @@ class RadioPage extends React.Component {
 `}
                     </PanelCode>
                 </Panel>
-                <h3>单选框组</h3>
+                <h3>禁用按钮</h3>
                 <Panel>
                     <PanelItem>
                         <Radio disabled value={1}>中国</Radio>

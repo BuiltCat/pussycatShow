@@ -8,8 +8,8 @@ class Footer extends React.Component {
                 <div className="layout" > 
                     <p>
                         <span><img className="logo" src="./logo.png" alt="logo"></img>Pussycat</span>
-                        <span><a href="https://github.com/BuiltCat" target="_blank">项目源码</a></span>
-                        <span><a href="https://github.com/BuiltCat" target="_blank">与我联系</a></span> 
+                        <span><a href="https://github.com/BuiltCat" rel="noopener noreferrer" target="_blank">项目源码</a></span>
+                        <span><a href="https://github.com/BuiltCat" rel="noopener noreferrer" target="_blank">与我联系</a></span> 
                     </p>
                 </div>
             </footer>

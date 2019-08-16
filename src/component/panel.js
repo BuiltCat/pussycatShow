@@ -1,4 +1,5 @@
 import React from "react";
+import hljs from 'highlight.js'
 
 class Panel extends React.Component {
     constructor(props) {
@@ -50,7 +51,9 @@ class PanelCode extends React.Component {
         return (
             <div className={this.props.isOpen ? 'panel-code-show' : 'panel-code-none'}>
                 <pre>
-                    {this.props.children}  
+                    <code className="lang-javascript" dangerouslySetInnerHTML={{
+                        __html: hljs.highlightAuto(this.props.children).value}}>
+                    </code>
                 </pre>
             </div>
         )

@@ -11,6 +11,7 @@ import ButtonPage from "./page/button";
 import StartPage from "./page/start";
 import RadioPage from "./page/radio";
 import MenuPage from "./page/menu";
+import TablePage from "./page/table"
 
 class App extends React.Component {
     constructor(props) {
@@ -44,6 +45,7 @@ class App extends React.Component {
                                 <NavBarItem path="/button">Button 按钮</NavBarItem>
                                 <NavBarItem path="/radio">Radio 单选框</NavBarItem>
                                 <NavBarItem path="/menu">Menu 菜单栏</NavBarItem>
+                                <NavBarItem path="/table">Table 表格</NavBarItem>
                             </NavBarGroup>
                         </NavBar>
                         <Route path="/" exact component={Main} />
@@ -51,6 +53,7 @@ class App extends React.Component {
                         <Route path="/start" exact component={StartPage} />
                         <Route path="/radio" exact component={RadioPage} />
                         <Route path="/menu" exact component={MenuPage} />
+                        <Route path="/table" exact component={TablePage} />
                     </div>
                     <Footer></Footer>
                 </div>
