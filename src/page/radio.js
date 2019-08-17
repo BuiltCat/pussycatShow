@@ -1,6 +1,6 @@
 import React from "react";
 import { Panel,PanelItem,PanelCode } from "../component/panel"
-import { Radio, RadioGroup } from "pussycat";
+import { Radio, RadioGroup, Table } from "pussycat";
 
 class RadioGroupOne extends React.Component {
     constructor(props) {
@@ -48,6 +48,54 @@ class RadioGroupTwo extends React.Component {
 
 class RadioPage extends React.Component {
     render() {
+        const columns = [{
+            label: "参数",
+            prop: "parameter"
+        },{
+            label: "说明",
+            prop: "explain"
+        },{
+            label: "类型",
+            prop: "type"
+        },{
+            label:"可选值",
+            prop: "optional"
+        },{
+            label:"默认值",
+            prop: "default"
+        }]
+        const RadioData=[{
+            parameter: "value",
+            explain: "Radio的value值",
+            type: "string | number | boolean",
+            optional: "",
+            default: ""
+        }, {
+            parameter: "checked",
+            explain: "Radio是否被选中",
+            type: "boolean",
+            optional: "",
+            default: "false"
+        }, {
+            parameter: "disable",
+            explain: "是否禁用",
+            type: "boolean",
+            optional: "true | false",
+            default: "false"
+        }]
+        const RadioGroupData=[{
+            parameter: "value",
+            explain: "值",
+            type: "string | number | boolean",
+            optional: "",
+            default: ""
+        },{
+            parameter: "onChange",
+            explain: "绑定值变化时触发",
+            type: "",
+            optional: "",
+            default: "返回选中Radio的值"
+        }]
         return (
             <main className="main">
                 <h2>Radio 单选框</h2>
@@ -126,6 +174,16 @@ class RadioPage extends React.Component {
 `}
                     </PanelCode>
                 </Panel>
+                <h3>Radio 属性列表</h3>
+                <Table
+                    columns={columns}
+                    data={RadioData}
+                />
+                <h3>RadioGroup 属性列表</h3>
+                <Table
+                    columns={columns}
+                    data={RadioGroupData}
+                />
             </main>
         )
     }

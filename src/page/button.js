@@ -1,9 +1,68 @@
 import React from "react";
 import { Panel,PanelItem,PanelCode } from "../component/panel"
-import { Button } from "pussycat";
+import { Button, Table } from "pussycat";
 
 class ButtonPage extends React.Component {
     render() {
+        const columns = [{
+            label: "参数",
+            prop: "parameter"
+        },{
+            label: "说明",
+            prop: "explain"
+        },{
+            label: "类型",
+            prop: "type"
+        },{
+            label:"可选值",
+            prop: "optional"
+        },{
+            label:"默认值",
+            prop: "default"
+        }]
+        const data=[{
+            parameter: "size",
+            explain: "尺寸",
+            type: "string",
+            optional: "mini | small | medium | default",
+            default: "default"
+        },{
+            parameter: "type",
+            explain: "类型",
+            type: "string",
+            optional: "default | primary | success | info | warning  danger",
+            default: "default"
+        },{
+            parameter: "fill",
+            explain: "是否填充按钮",
+            type: "Boolean",
+            optional: "true | false",
+            default: "false"
+        },{
+            parameter: "round",
+            explain: "是否圆角按钮",
+            type: "Boolean",
+            optional: "true | false",
+            default: "false"
+        },{
+            parameter: "circle",
+            explain: "是否圆型按钮",
+            type: "Boolean",
+            optional: "true | false",
+            default: "false"
+        },{
+            parameter: "disable",
+            explain: "是否禁用按钮",
+            type: "Boolean",
+            optional: "true | false",
+            default: "false"
+        },{
+            parameter: "icon",
+            explain: "图标",
+            type: "string",
+            optional: "——",
+            default: "——"
+        }]
         return (
             <main className="main">
                 <h2>Button 按钮</h2>
@@ -152,6 +211,11 @@ class ButtonPage extends React.Component {
     }`}
                     </PanelCode>
                 </Panel>
+                <h3>属性列表</h3>
+                <Table
+                    columns={columns}
+                    data={data}
+                />
             </main>
         )
     }

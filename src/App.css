@@ -152,3 +152,24 @@
     vertical-align: bottom;
     width: 30px;
 }
+.iconList{
+    display: inline-block;
+    box-sizing: border-box;
+    width: 20%;
+    text-align: center;
+    border:1px solid #eaeefb;
+    padding: 5px;
+    height: 130px;
+}
+.iconList span{
+    display: inline-block;
+    vertical-align: middle;
+    height: 110px;
+}
+.iconList i{
+    display: block;
+    font-size: 56px;
+    color: #5e6d82;
+    margin-bottom: 10px;
+}
+
