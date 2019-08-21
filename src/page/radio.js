@@ -9,15 +9,14 @@ class RadioGroupOne extends React.Component {
             value: "a"
         }
     }
-    onChange(value) {
-        console.log(value)
+    onChange= (value) => {
         this.setState({ value:value });
     }
     render() {
         return (
             <div>
-                <Radio value="a" checked={this.state.value === "a"} onChange={this.onChange.bind(this)}>备选项</Radio>
-                <Radio value="b" checked={this.state.value === "b"} onChange={this.onChange.bind(this)}>备选项</Radio>
+                <Radio value="a" stateValue={this.state.value} onChange={this.onChange}>备选项</Radio>
+                <Radio value="b" stateValue={this.state.value} onChange={this.onChange}>备选项</Radio>
             </div>
         )
     }
@@ -71,11 +70,11 @@ class RadioPage extends React.Component {
             optional: "",
             default: ""
         }, {
-            parameter: "checked",
-            explain: "Radio是否被选中",
-            type: "boolean",
+            parameter: "stateValue",
+            explain: "状态值",
+            type: "string | number | boolean",
             optional: "",
-            default: "false"
+            default: ""
         }, {
             parameter: "disable",
             explain: "是否禁用",
