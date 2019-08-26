@@ -1,6 +1,6 @@
-import React from "react";
+import React from "react"
 import { Panel,PanelItem,PanelCode } from "../component/panel"
-import { Menu, MenuItem, SubMenu,Table } from "pussycat";
+import { Menu, MenuItem, SubMenu,Table } from "pussycat"
 
 class HorMenu extends React.Component {
     render() {

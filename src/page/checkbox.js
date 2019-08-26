@@ -12,13 +12,13 @@ class CheckBoxShow extends React.Component{
       render() {
         return (
             <div>
-            {/* <CheckBoxGroup value={this.state.checkList} onChange={this.onChange}> */}
-            <CheckBox label="复选框 A"></CheckBox>
-            <CheckBox label="复选框 B"></CheckBox>
-            <CheckBox label="复选框 C"></CheckBox>
-            <CheckBox label="禁用" disabled></CheckBox>
-            <CheckBox label="选中且禁用" disabled></CheckBox>
-            {/* </CheckBoxGroup> */}
+            <CheckBoxGroup value={this.state.checkList} onChange={this.onChange}>
+                <CheckBox label="复选框 A"></CheckBox>
+                <CheckBox label="复选框 B"></CheckBox>
+                <CheckBox label="复选框 C"></CheckBox>
+                <CheckBox label="禁用" disabled></CheckBox>
+                <CheckBox label="选中且禁用" disabled></CheckBox>
+            </CheckBoxGroup>
             </div>
         )
       }
