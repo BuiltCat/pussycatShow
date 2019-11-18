@@ -172,4 +172,13 @@
     color: #5e6d82;
     margin-bottom: 10px;
 }
-
+.cat-layout-col{
+    margin-top: 10px;
+}
+.cat-input{
+    margin-right: 100px;
+    margin-top: 10px;
+}
+.cat-tag{
+    margin-right: 10px;
+}

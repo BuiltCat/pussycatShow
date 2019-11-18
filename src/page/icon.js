@@ -9,9 +9,9 @@ function Icon(){
     return (
         <ul>
             { 
-                iconList.map( i => {
+                iconList.map( (i, n) => {
                 return(
-                    <li className="iconList">
+                    <li className="iconList" key={n}>
                         <span>
                             <i className={`catfont cat-${i.replace(" ","")}`}></i>
                             {` cat-${i.replace(" ","")}`}
