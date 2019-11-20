@@ -3,10 +3,10 @@ import { BrowserRouter as Router, Route } from "react-router-dom";
 import './app.css';
 // 组件
 import Headr from "./component/header"
-import { NavBar, NavBarItem, NavBarGroup } from "./component/navbar"
-import Footer from "./component/footer"
-// 页面
 import Main from "./component/main"
+import Footer from "./component/footer"
+import Nav from "./component/nav"
+// 页面
 import ButtonPage from "./page/button"
 import StartPage from "./page/start"
 import RadioPage from "./page/radio"
@@ -19,68 +19,29 @@ import LayoutPage from './page/layout'
 import SelectPage from './page/select'
 import TagPage from './page/tag'
 import ProgressPage from './page/progress'
-
+import LoadingPage from './page/Loading'
 class App extends React.Component {
-    constructor(props) {
-        super(props);
-        this.state = {
-            logo: {
-                name: 'Pussycat',
-                image: './logo.png',
-            },
-            list: [{
-                name: '主页',
-                url: '/'
-            }, {
-                name: '组件',
-                url: ''
-            }]
-        }
-
-    }
     render() {
         return (
             <Router>
                 <div>
-                    <Headr logo={this.state.logo} list={this.state.list}></Headr>
+                    <Headr></Headr>
                     <div className="app layout clearfix">
-                        <NavBar>
-                            <NavBarGroup title="开发指南">
-                                <NavBarItem path="/start">快速开始</NavBarItem>
-                            </NavBarGroup>
-                            <NavBarGroup title="Basic">
-                                <NavBarItem path="/layout">Layout 布局</NavBarItem>
-                                <NavBarItem path="/icon">Icon 图标</NavBarItem>
-                                <NavBarItem path="/button">Button 按钮</NavBarItem>
-                            </NavBarGroup>
-                            <NavBarGroup title="From">
-                                <NavBarItem path="/radio">Radio 单选框</NavBarItem>
-                                <NavBarItem path="/checkbox">Checkbox 多选框</NavBarItem>
-                                <NavBarItem path="/input">Input 输入框</NavBarItem>
-                                <NavBarItem path="/select">Select 选择框</NavBarItem>
-                            </NavBarGroup>
-                            <NavBarGroup title="Data">
-                                <NavBarItem path="/table">Table 表格</NavBarItem>
-                                <NavBarItem path="/tag">Tag 标签</NavBarItem>
-                                <NavBarItem path="/progress">ProgressPage 进度条</NavBarItem>
-                            </NavBarGroup>
-                            <NavBarGroup title="Nav">
-                                <NavBarItem path="/menu">Menu 菜单栏</NavBarItem>
-                            </NavBarGroup>
-                        </NavBar>
                         <Route path="/" exact component={Main} />
-                        <Route path="/layout" exact component={LayoutPage} />
-                        <Route path="/icon" exact component={IconPage} />
-                        <Route path="/button" exact component={ButtonPage} />
-                        <Route path="/start" exact component={StartPage} />
-                        <Route path="/radio" exact component={RadioPage} />
-                        <Route path="/checkbox" exact component={CheckBoxPage} />
-                        <Route path="/input" exact component={InputPage} />
-                        <Route path="/select" exact component={SelectPage} />
-                        <Route path="/table" exact component={TablePage} />
-                        <Route path="/tag" exact component={TagPage} />
-                        <Route path="/progress" exact component={ProgressPage} />
-                        <Route path="/menu" exact component={MenuPage} />
+                        <Route path="/component"  component={Nav} />
+                        <Route path="/component/layout"  component={LayoutPage} />
+                        <Route path="/component/icon"  component={IconPage} />
+                        <Route path="/component/button"  component={ButtonPage} />
+                        <Route path="/component/start"  component={StartPage} />
+                        <Route path="/component/radio"  component={RadioPage} />
+                        <Route path="/component/checkbox"  component={CheckBoxPage} />
+                        <Route path="/component/input"  component={InputPage} />
+                        <Route path="/component/select"  component={SelectPage} />
+                        <Route path="/component/table"  component={TablePage} />
+                        <Route path="/component/tag"  component={TagPage} />
+                        <Route path="/component/progress"  component={ProgressPage} />
+                        <Route path="/component/loading" component={LoadingPage} />
+                        <Route path="/component/menu"  component={MenuPage} />
                     </div>
                     <Footer></Footer>
                 </div>

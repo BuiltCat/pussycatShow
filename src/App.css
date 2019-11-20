@@ -43,8 +43,9 @@
     float: left;
     padding: 0 30px;
 }
-.header ul>li:hover{
-    border-bottom: 5px solid #91EAE4;
+.header ul>li a{
+    color: #409eff;
+    text-decoration: none;
 }
 .app{
     padding-top: 50px;
@@ -181,4 +182,21 @@
 }
 .cat-tag{
     margin-right: 10px;
+}
+@keyframes start{
+    from { 
+        background: #409eff;
+        height: 0;
+    }
+    to {
+        background: #fff;
+        height: 70vh;
+        border: none;
+    }
+}
+
+#start{
+    width: 100%;
+    height: 70vh;
+    /* animation: start 3s linear; */
 }
