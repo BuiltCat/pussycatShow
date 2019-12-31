@@ -197,6 +197,62 @@
 
 #start{
     width: 100%;
-    height: 70vh;
+    height: calc(100vh - 325px);
+    /* height: 70vh; */
     /* animation: start 3s linear; */
+    position: relative;
+}
+.start{
+    position: absolute;
+    text-align: center;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50% , -50%);
+}
+.start img{
+    display: inline-block;
+    width: 80px;
+    vertical-align: middle;
+}
+.start h2{
+    display: inline-block;
+    font-size: 64px;
+    margin-bottom: 10px;
+    vertical-align: middle;
+}
+.start p{
+    margin-bottom: 20px;
+}
+.start button{
+    margin-right: 12px;
+}
+#start .spot{
+    position: absolute;
+    right: 10px;
+}
+#start .spot span{
+    display: block;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    border: 1px solid #409eff;
+    margin: 5px 0 5px 0;
+}
+#start .spot span.active{
+    background: #409eff;
+}
+#start .progress{
+    width: 10px;
+    height: 100%;
+    background: #409eff;
+}
+#start .progress .inline{
+    background: #fff;
+    animation: progress 5s infinite;
+    height: 100%;
+}
+
+@keyframes progress{
+    from {height: 0%;}
+    to {height: 100%;}
 }
